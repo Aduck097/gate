@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Noto Serif SC", "STKaiti", "KaiTi", "SimSun", serif;
+  --font-sans: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+@utility writing-vertical-rl {
+  writing-mode: vertical-rl;
+}
+
+body {
+  background-color: #050b14;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(15, 23, 42, 0.8), #050b14 80%),
+    url('https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1920&auto=format&fit=crop');
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #e2e8f0;
+}
+
+.text-gold {
+  background: linear-gradient(to bottom, #fffbeb, #fde68a, #d97706);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(217, 119, 6, 0.5);
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #fef08a 0%, #d97706 100%);
+}
+
+.glass-panel {
+  background: rgba(10, 15, 26, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(217, 119, 6, 0.4);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(217, 119, 6, 0.1);
+}
+
+.scroll-bg {
+  background-color: #f4ebd0;
+  background-image: url('https://www.transparenttextures.com/patterns/rice-paper.png');
+  color: #2d3748;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); opacity: 0.8; }
+  50% { transform: translateY(-20px) scale(1.05); opacity: 1; }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin-slow-reverse {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 40px rgba(217, 119, 6, 0.4), inset 0 0 20px rgba(217, 119, 6, 0.2); }
+  50% { box-shadow: 0 0 80px rgba(217, 119, 6, 0.8), inset 0 0 40px rgba(217, 119, 6, 0.4); }
+}
+
+.lantern {
+  animation: float 6s ease-in-out infinite;
+}
+.lantern-delayed {
+  animation: float 8s ease-in-out 3s infinite;
+}
+
+.wood-tag {
+  background: linear-gradient(to right, #5c3a21, #8b5a2b, #5c3a21);
+  box-shadow: 2px 4px 10px rgba(0,0,0,0.5), inset 1px 1px 2px rgba(255,255,255,0.2);
+  border: 1px solid #3a2010;
+}
